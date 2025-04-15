@@ -1,0 +1,15 @@
+stages:
+  preparation_phase:
+    cmd: python src/data_ingestion.py
+    deps:
+    - data/raw/dataset.csv
+    - src/data_ingestion.py
+    outs:
+    - data/data_preparation_phase/
+  preprocessing_phase:
+    cmd: python src/data_preprocessing.py
+    deps:
+    - data/data_preparation_phase/
+    - src/data_preprocessing.py
+    outs:
+    - data/preprocessing_phase/

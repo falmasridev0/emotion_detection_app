@@ -20,7 +20,7 @@ urlretrieve(url="https://raw.githubusercontent.com/campusx-official/jupyter-mast
 # In[ ]:
 
 
-dataset = pd.read_csv("../data/raw/dataset.csv")
+dataset = pd.read_csv("data/raw/dataset.csv")
 
 
 # In[4]:
@@ -127,7 +127,7 @@ for set in datasets:
 
 # last step in data ingestion:
 for set in datasets:
-    datasets[set].to_csv(f"../data/data_preparation_phase/{set}_set.csv",index=False)
+    datasets[set].to_csv(f"data/data_preparation_phase/{set}_set.csv",index=False)
 
 
 # In[ ]:

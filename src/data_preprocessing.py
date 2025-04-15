@@ -1,13 +1,13 @@
 import nltk
 import pandas as pd
 import os.path as path
+import os
 import re
 from nltk.corpus import stopwords
 
 SETS_PATH = "data/data_preparation_phase"
 nltk.download('stopwords')
 nltk.download('wordnet')
-
 #step 1: data exploration:
 datasets = {'train':pd.read_csv(path.join(SETS_PATH,"train_set.csv")),
             'valid':pd.read_csv(path.join(SETS_PATH,"valid_set.csv")),
@@ -38,7 +38,7 @@ def remove_stopwords(text,stopwords=stopwords.words('english')):
 def remove_links(text):
     return re.sub(r'\b(?:https?://|www\.)?\S+\.\S+\b', '', text)
 
-def remove_repitive_patterns(text):
+def remove_repititve_patterns(text):
     # Step 1: Replace repeated characters (3+ times)
     text = re.sub(r'(.)\1{2,}', r'\1', text)
 
@@ -57,7 +57,7 @@ def preprocessing(content,functions):
     return content
 
 
-preprocessing_functions = [lower_case,remove_puncitions,remove_numbers,trim_extra_spaces,remove_stopwords,remove_links,remove_repittive_patterns,nltk.casual.casual_tokenize]
+preprocessing_functions = [lower_case,remove_puncitions,remove_numbers,trim_extra_spaces,remove_stopwords,remove_links,remove_repititve_patterns,nltk.casual.casual_tokenize]
 
 
 #let's tokenize all the sets and save them:
