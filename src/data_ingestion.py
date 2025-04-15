@@ -7,14 +7,17 @@
 from urllib.request import urlretrieve
 import pandas as pd
 from sklearn.model_selection import train_test_split
+import os
+import shutil
 
-
-# In[2]:
-
+os.makedirs("data/data_preparation_phase",exist_ok=True)
+os.makedirs("data/raw",exist_ok=True)
 
 #step 3.1 - load data from the remote source
 urlretrieve(url="https://raw.githubusercontent.com/campusx-official/jupyter-masterclass/main/tweet_emotions.csv",
                        filename="dataset.csv")
+
+shutil.move("dataset.csv","data/raw/dataset.csv")
 
 
 # In[ ]:

@@ -9,6 +9,7 @@ SETS_PATH = "data/data_preparation_phase"
 nltk.download('stopwords')
 nltk.download('wordnet')
 #step 1: data exploration:
+os.makedirs("data/preprocessing_phase",exist_ok=True)
 datasets = {'train':pd.read_csv(path.join(SETS_PATH,"train_set.csv")),
             'valid':pd.read_csv(path.join(SETS_PATH,"valid_set.csv")),
             'test':pd.read_csv(path.join(SETS_PATH,"test_set.csv"))}
