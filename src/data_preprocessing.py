@@ -69,5 +69,5 @@ for s in datasets:
 #let's check some samples of each and save results:d
 for s in datasets:
     print(f"{s}_set:\n{datasets[s].head()}")
-    datasets[s].to_csv(f"data/preprocessing_phase/{s}_set.csv")
+    datasets[s].to_csv(f"data/preprocessing_phase/{s}_set.csv",index=False)
 
