@@ -35,3 +35,26 @@ stages:
       md5: 81a99d8c82ee8b3c0e5e6a59036eba63.dir
       size: 535197
       nfiles: 3
+  features:
+    cmd: python src/feature_engineering.py
+    deps:
+    - path: data/corpus/
+      hash: md5
+      md5: 881ce0fde709c91feb26c2cd1757404d.dir
+      size: 15637
+      nfiles: 2
+    - path: data/preprocessing_phase/
+      hash: md5
+      md5: 81a99d8c82ee8b3c0e5e6a59036eba63.dir
+      size: 535197
+      nfiles: 3
+    - path: src/feature_engineering.py
+      hash: md5
+      md5: e2f665443bc40a387fb6262fe4dc1f28
+      size: 1838
+    outs:
+    - path: data/features/
+      hash: md5
+      md5: e66c9588107fb557b2bca927817c56f0.dir
+      size: 445621407
+      nfiles: 3
