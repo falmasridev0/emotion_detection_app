@@ -58,7 +58,7 @@ def preprocessing(content,functions):
     return content
 
 
-preprocessing_functions = [lower_case,remove_puncitions,remove_numbers,trim_extra_spaces,remove_stopwords,remove_links,remove_repititve_patterns,nltk.casual.casual_tokenize]
+preprocessing_functions = [lower_case,remove_puncitions,remove_numbers,trim_extra_spaces,remove_stopwords,remove_links,remove_repititve_patterns]
 
 
 #let's tokenize all the sets and save them:
