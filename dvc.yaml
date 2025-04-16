@@ -13,3 +13,11 @@ stages:
     - src/data_preprocessing.py
     outs:
     - data/preprocessing_phase/
+  features:
+    cmd: python src/feature_engineering.py
+    deps:
+    - data/corpus/
+    - data/preprocessing_phase/
+    - src/feature_engineering.py
+    outs:
+    - data/features/
